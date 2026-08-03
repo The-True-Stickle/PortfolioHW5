@@ -1,4 +1,6 @@
 {
   "url": "https://portfoliohw5.bowen-bothello.workers.dev/",
-  "repository":  "https://github.com/The-True-Stickle/PortfolioHW5/tree/main"
+  "ssg-url": "https://ssg-test5.bowen-bothello.workers.dev/",
+  "repository-portfolio":  "https://github.com/The-True-Stickle/PortfolioHW5/tree/main",
+  "repository-ssg": "https://github.com/The-True-Stickle/SSG_Test"
 }

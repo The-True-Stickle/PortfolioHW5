@@ -2,15 +2,17 @@ Because I wasn't able to migrate all of my original pages to the static generati
 
 Setup Instructions for the SSG: 1 - In the terminal, type "npm i -D @11ty/eleventy", then in the terminal, type "npx @11ty/eleventy --serve"
 
+Note: Because I wasn't able to combine my whole original portfolio site with parts 1 and 2 into the SSG for part 3, I have deployed two sites.
+
 Part 1: 
 I chose the form validator option, and without Javascript, it is able to validate inputs using the html attributes of pattern, minlength, and maxlength, as well as utilizing title to display to the user the requirements for valid input.
 
-Part 2:
+Part 2 (https://portfoliohw5.bowen-bothello.workers.dev/):
 Web component reference: My tag name is "my-joke-element", and it uses the Official Joke API for its endpoint. When introduced with an element, it will display a joke setup, an unrelated joke punchline, and a button to update that punchline. The user can press the button to keep changing the punchline to a joke structure that they like.
 
 Using an innerHTML string from remote data would be a dangerious injection risk as if the third party site delivering the data turns malicious, it could load dangerous html contents (such as a <script> which references an even more dangerous remote entity) onto the site.
 
-Part 3:
+Part 3 (https://ssg-test5.bowen-bothello.workers.dev/):
 I chose eleventy for my SSG and the conversion removed my need to manually write the skeleton of a html page including tags like DOCTYPE, html, head, and body from every page I create. The conversion also allowed me to create a reusable header, footer, and meta to allow me to not have to retype them on every page. The page templates do cost flexibility in design since they follow a more rigid structure only filled in by the markdown and site data, which is why I would not use an SSG for a website where every page has to be completely unique from the rest.
 
 
