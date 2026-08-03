@@ -19,7 +19,6 @@ class MyStupidJokeElement extends HTMLElement  {
         fetch('https://official-joke-api.appspot.com/jokes/random')
             .then(response => response.json())
             .then(data =>  {
-                console.log(data.punchline)
                 this.shadowRoot.getElementById("set-up").textContent = data.setup;
                 localStorage.setItem("currentJoke", JSON.stringify(data));
                 const stateDisplay = this.shadowRoot.getElementById('joke-content');
@@ -29,11 +28,9 @@ class MyStupidJokeElement extends HTMLElement  {
     }
     
     showPunchline() {
-        console.log("New joke");
         fetch('https://official-joke-api.appspot.com/jokes/random')
             .then(response => response.json())
             .then(data =>  {
-                console.log(data)
                 this.shadowRoot.getElementById("punchline").textContent = data.punchline;
                 localStorage.setItem("currentJoke", JSON.stringify(data));
                 const stateDisplay = this.shadowRoot.getElementById('joke-content');
@@ -47,7 +44,6 @@ class MyStupidJokeElement extends HTMLElement  {
         const timeout = setTimeout(() => {
             abortController.abort();
         }, 10000);
-        console.log("Custom element added to page.");
         let template = document.getElementById("joke-template");
         let templateContent = template.content;
 
@@ -78,4 +74,3 @@ class MyStupidJokeElement extends HTMLElement  {
 
 customElements.define("my-joke-element", MyStupidJokeElement);
 
-console.log("hi");
