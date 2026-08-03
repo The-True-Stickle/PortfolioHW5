@@ -1,4 +1,8 @@
+const controller = new AbortController();
+
 class MyStupidJokeElement extends HTMLElement  {
+
+    
     constructor() {
         super();
     }
@@ -51,7 +55,7 @@ class MyStupidJokeElement extends HTMLElement  {
         stateDisplay.dataset.state = "loading";
 
         const newJokeButton = this.shadowRoot.querySelector("button");
-        newJokeButton.addEventListener('click', () => this.showPunchline());
+        newJokeButton.addEventListener('click', () => this.showPunchline(), { signal: controller.signal });
 
         this.showSetup();
         this.showPunchline();
