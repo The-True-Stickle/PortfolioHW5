@@ -1,0 +1,20 @@
+Because I wasn't able to migrate all of my original pages to the static generation, I have kept the work seperate but within the same repository. I think this is what is causing the issue where gradescope is not properly parsing my work for the different parts because it is flagging me for missing the majority of the work I have done and is present in this repository. For example, for part 1, the files: contact.html, css/contact.css, and js/contact.js are all features of the form which aren't being properly read and graded. For part 2, I used punchline.html, css/punchline-template, css/punchline.css, and js/punchline.js for my remote endpoint work. Everything within the eleventy-stuff directory is my work on the static-site generator. I have done most of the bullet points provided in the assignment and I request you check for that manually since gradescope won't pick up on many of them. 
+
+Setup Instructions for the SSG: 1 - In the terminal, type "npm i -D @11ty/eleventy", then in the terminal, type "npx @11ty/eleventy --serve"
+
+Part 1: 
+I chose the form validator option, and without Javascript, it is able to validate inputs using the html attributes of pattern, minlength, and maxlength, as well as utilizing title to display to the user the requirements for valid input.
+
+Part 2:
+Web component reference: My tag name is "my-joke-element", and it uses the Official Joke API for its endpoint. When introduced with an element, it will display a joke setup, an unrelated joke punchline, and a button to update that punchline. The user can press the button to keep changing the punchline to a joke structure that they like.
+
+Using an innerHTML string from remote data would be a dangerious injection risk as if the third party site delivering the data turns malicious, it could load dangerous html contents (such as a <script> which references an even more dangerous remote entity) onto the site.
+
+Part 3:
+I chose eleventy for my SSG and the conversion removed my need to manually write the skeleton of a html page including tags like DOCTYPE, html, head, and body from every page I create. The conversion also allowed me to create a reusable header, footer, and meta to allow me to not have to retype them on every page. The page templates do cost flexibility in design since they follow a more rigid structure only filled in by the markdown and site data, which is why I would not use an SSG for a website where every page has to be completely unique from the rest.
+
+
+
+---
+
+I apologize if my work on this assignment is more scattered and direct then my previous work. Frankly, I have been burnt out this entire last week and I decided I should make sure I get at least all the core ideas down even if I didn't have the motivation to customize it to an actual portfolio.

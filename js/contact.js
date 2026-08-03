@@ -1,3 +1,5 @@
+const errors = [];
+
 let email = document.getElementById("email");
 let emailResponse = document.getElementById("email-response");
 
