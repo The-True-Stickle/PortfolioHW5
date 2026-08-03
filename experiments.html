@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Experiments Page</title>
+    </head>
+
+    <body>
+        <template id="example">
+            <p>template text</p>
+        </template>
+
+        <figure class="audio">
+            <figcaption>Hear me say the letter "E"</figcaption>
+            <audio controls src="/Media/WAV/E_Good.wav"></audio>
+        </figure>
+
+        <video controls width="500">
+            <source src="/Media/MP4/old_footage.mp4" type="video/mp4" />
+        </video>
+
+        <canvas width="300" height="300" id="purple-rectangle">
+            Shows a purple rectangle
+        </canvas>
+
+        <script>
+            const canvas = document.getElementById("purple-rectangle");
+            const context = canvas.getContext("2d");
+            context.fillStyle = "purple";
+            context.fillRect(50, 20, 200, 400);
+        </script>
+    </body>
+
+
+
+
+
+
+
+</html>

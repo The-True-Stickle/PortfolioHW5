@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Punchline</title>
+    <link rel="stylesheet" href="css/punchline.css" />
+    <script async type="module" src="js/punchline.js"></script>
+</head>
+
+<body>
+    <header>
+        <hgroup>
+            <h1>Joke Maker</h1>
+            <p>This is how jokes are made</p>
+        </hgroup>
+    </header>
+
+    <main>
+        <template id="joke-template" >
+            <!-- Doing this here because it'll be in a shadow DOM -->
+            <link rel="stylesheet" href="css/punchline-template.css" />
+            <div data-state="idle" id="joke-content">
+                <slot name="state-printer"><p class="joke-status">Connecting to Joke Machine</p></slot>
+                <slot name="set-up"><p id="set-up">[Set-up]</p></slot>
+                <slot name="punchline"><p id="punchline" joke-type="general">[Punchline]</p></slot>
+                <button id="new-punchline">Give me a new punchline</button>
+            </div>
+
+        </template>
+
+        <my-joke-element>
+            
+        </my-joke-element>
+        <noscript>
+            <p>You currently have JavaScript disabled so you won't be able to view the joke maker.</p>
+        </noscript>
+    </main>
+</body>
+
+
+
+</html>

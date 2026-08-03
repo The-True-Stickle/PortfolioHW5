@@ -1,0 +1,29 @@
+*::part(body) {
+    margin: 0;
+    padding-left: 100rem;
+}
+
+:root {
+    --cool-font: "Helvetica Neue", Arial, sans-serif;
+}
+
+
+
+#joke-content[data-state="idle"] .joke-status {
+    opacity: 1;
+    display: inline;
+
+}
+#joke-content[data-state="loading"] .joke-status {
+    opacity: 0.5;
+    display: inline;
+}
+#joke-content[data-state="ready"] .joke-status {
+    display: none;
+}
+#joke-content[data-state="error"] .joke-status {
+    opacity: 1;
+    color: red;
+    display: inline;
+
+}

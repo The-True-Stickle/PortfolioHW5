@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cool-font: "Helvetica Neue", Arial, sans-serif;
+}
+
+header, main {
+    font-family: var(--cool-font);
+    padding: 1.2rem;
+}
+
+my-joke-element::part(body) {
+    padding-left: 10rem;
+}
+
+
+main > p {
+    font-size: 1.9rem;
+}

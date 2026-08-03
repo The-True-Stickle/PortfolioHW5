@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="css/contact.css" />
+    <script async type="module" src="js/contact.js"></script>
+</head>
+
+<body>
+
+    <h1>Contact</h1>
+
+    <section class="Contact Form">
+        <h2>Contact Form</h2>
+        <dialog id="error-dialog">
+            Contact form not complete yet!
+            <button commandfor="error-dialog" command="close">Close</button>
+        </dialog>
+        <form class="contact-form">
+            <fieldset>
+                <legend>Send a Message to Bowen ("Bee") Bothello</legend>
+                <div class="form-question">
+                    <label for="name"> Enter Name</label>
+                    <input type="text" name="name" id="name" required pattern="[a-z0-9._%+\-]+" minlength="2" maxlength="20" title="Make sure name is within 2 and 20 characters!"/>
+                    <output for="name" id="name-response" aria-live="polite"></output>
+                </div>
+                <div class="form-question">
+                    <label for="email"> Enter Email </label>
+                    <input type="email" name="email" id="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+" minlength="5" maxlength="30" title="Make sure to follow the email format of [words]@[email].[domain extension]"/>
+                    <output for="email" id="email-response" aria-live="polite"></output>
+                </div>
+                <div class="form-question">
+                    <label for="message">Message Content: </label>
+                    <textarea id="message" name="message" rows="7" cols="30" minlength="2" maxlength="1000" title="Max 1000 characters!">
+                    </textarea>
+                </div>
+
+                <button command="show-modal" commandfor="error-dialog">
+                    Submit Form
+                </button>
+                <progress id="progress-bar" value="0" max="100">0%</progress>
+            </fieldset>
+
+
+
+        </form>
+    </section>
+    <h2>Alt contact listed in order of preference</h2>
+    <ol>
+        <li><address><a href="mailto:bowen.bothello@gmail.com">bowen.bothello@gmail.com</a></address></li>
+        <li><address><a href="http://linkedin.com/in/bbothello">www.linkedin.com/in/bbothello</a></address></li>
+        <li><address><a href="tel:+16038585995">+1 (603) 858-5995</a></address></li>
+    </ol>
+
+    <!-- Cool circle -->
+    <p>Cool circle</p>
+    <svg viewBox="0 0 10 10" x="600" width="100">
+        <circle cx="2" cy="2" r="4" />
+    </svg>
+
+    <!-- Cool dialog -->
+    <dialog id="fun-dialog">
+        Yay!
+        <button commandfor="fun-dialog" command="close">Close</button>
+    </dialog>
+    <button command="show-modal" commandfor="fun-dialog">
+        Cool Button
+    </button>
+</body>
+
+
+
+</html>

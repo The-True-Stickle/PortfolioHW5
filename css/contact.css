@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0.2rem;
+}
+
+
+input:user-invalid {
+    border: 2px solid red;
+}
