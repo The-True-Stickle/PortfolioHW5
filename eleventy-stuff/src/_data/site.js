@@ -5,8 +5,8 @@ module.exports = {
 
     navigation: [
         {label: "Home", url: "/"},
-        {label: "Deitrus", url: "/Deitrus"},
-        {label: "Overtime", url: "/Overtime"},
-        {label: "Threes Will Die", url: "/Threes"}
+        {label: "Deitrus", url: "/projects/Deitrus"},
+        {label: "Overtime", url: "/projects/Overtime"},
+        {label: "Threes Will Die", url: "/projects/Threes"}
     ]
 }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "meta.njk" %}
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+    {% include "header.njk" %}
+    <main>
+        {{ content | safe }}
+
+        <p><a target="_blank" href="{{ link }}">Play the Game</a></p>
+    </main>
+    {% include "footer.njk" %}
+</body>
+
+
+
+</html>
