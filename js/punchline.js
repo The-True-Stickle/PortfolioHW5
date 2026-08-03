@@ -1,4 +1,4 @@
-const controller = new AbortController();
+
 
 class MyStupidJokeElement extends HTMLElement  {
 
@@ -6,6 +6,8 @@ class MyStupidJokeElement extends HTMLElement  {
     constructor() {
         super();
     }
+
+    
 
     displayError() {
         const stateDisplay = this.shadowRoot.getElementById('joke-content');
@@ -41,6 +43,10 @@ class MyStupidJokeElement extends HTMLElement  {
     }
 
     connectedCallback() {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => {
+            abortController.abort();
+        }, 10000);
         console.log("Custom element added to page.");
         let template = document.getElementById("joke-template");
         let templateContent = template.content;
