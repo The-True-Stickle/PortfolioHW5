@@ -1,0 +1,16 @@
+<header>
+    <p>Bowen ("Bee") Bothello's Website</p>
+    <nav class="navigation">
+            <ul>
+                {% for item in site.navigation %}
+                <li>
+                <a href="{{ item.url }}"
+                {% if item.url in page.url %}
+                {% set currentAttribute = 'aria-current="page"' %}
+                {% endif %}>
+                {{ item.label }} </a>
+                </li>
+                {% endfor %}
+            </ul>
+    </nav>
+</header>
